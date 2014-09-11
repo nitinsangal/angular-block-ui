@@ -301,6 +301,13 @@ angular.module('blockUI').factory('blockUI', function(blockUIConfig, $timeout, b
         self._restoreFocus.focus();
         self._restoreFocus = null;
       }
+      else {
+         if(typeof(self._restoreFocus) != "undefined")
+         {
+            self._restoreFocus.focus();
+            self._restoreFocus = null;
+         }
+      }
       
       try {
         if (executeCallbacks) {
